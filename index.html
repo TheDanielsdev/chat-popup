@@ -40,6 +40,7 @@
     
      <div class="chat-form new-view-container" id="new-view-container">
       
+      
      </div>
      
     </div>
@@ -56,7 +57,15 @@
             // Create and display the new view
             const newView = document.createElement("div");
             newView.innerHTML = `
-             <input type="text" class="form-control" placeholder="Service">
+            <label for="fruits">Select a service:</label>
+    <select id="fruits" name="fruits" class="form-control">
+        <option value="-- --">-- --</option>
+        <option value="airtime">Airtime</option>
+        <option value="data">Data</option>
+        <option value="electric">Electricity</option>
+        <option value="cable">Cable</option>
+       
+    </select><br>
              <input type="text" class="form-control" placeholder="Transaction"> 
              <button class="btn btn-success btn-block" id="submit-loadTransaction"><i class="fa fa-check-circle" aria-hidden="true"></i> Verify transaction</button> 
        
