@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.chat-btn {
+    position: absolute;
+    right: 14px;
+    bottom: 30px;
+    cursor: pointer
+}
+
+.chat-btn .close {
+    display: none
+}
+
+.chat-btn i {
+    transition: all 0.9s ease
+}
+
+#check:checked~.chat-btn i {
+    display: block;
+    pointer-events: auto;
+    transform: rotate(180deg)
+}
+
+#check:checked~.chat-btn .comment {
+    display: none
+}
+
+.chat-btn i {
+    font-size: 22px;
+    color: #fff !important
+}
+
+/* Original button styles */
+.chat-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: blue;
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.chat-btn:hover {
+    background-color: red; /* Change to a different color on hover */
+    transform: scale(1.1); /* Scale the button up slightly on hover */
+}
+
+/* Add other animation effects as needed */
+/* Animation keyframes */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Apply the animation to the button */
+.chat-btn {
+    /* ... other styles ... */
+    animation: bounce 1s infinite; /* Apply the "bounce" animation */
+}
+
+
+.wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 100px;   
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.4s
+}
+
+#check:checked~.wrapper {
+    opacity: 1
+}
+
+.header {
+    padding: 13px;
+    background-color: tomato;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 10px;
+    color: #fff
+}
+
+.chat-form {
+    padding: 15px
+}
+
+.chat-form input,
+textarea,
+button {
+    margin-bottom: 10px
+}
+
+.chat-form textarea {
+    resize: none
+}
+
+.form-control:focus,
+.btn:focus {
+    box-shadow: none
+}
+
+.btn,
+.btn:focus,
+.btn:hover {
+    width: 100%;
+    background-color: tomato;
+    border: tomato
+}
+
+#check {
+    display: none !important
+}
+
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.chat-messages {
+    padding: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+/* ... Previous CSS styles ... */
+
+.message img {
+    max-width: 20px; /* Adjust the maximum image width as needed */
+    border-radius: 50%;
+    margin: 5px;
+}
+
+/* ... Remaining CSS styles ... */
+
+
+.received {
+    background-color: #f0f0f0;
+    text-align: left;
+}
+
+.sent {
+    background-color: tomato;
+    color: #fff;
+    text-align: right;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#send-button {
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+#send-button:hover {
+    background-color: rgb(253, 134, 113);
+}
